@@ -13,11 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
 */
-
+import { APIProvider } from '@vis.gl/react-google-maps';
 import React from 'react';
 import { createRoot } from "react-dom/client";
 
-const App = () => (<h1>Hello, world!</h1>);
+const App = () => (
+<APIProvider apiKey={'Your API key here'} onLoad={() => console.log('Maps API has loaded.')}></APIProvider>
+<h1>Hello, world!</h1>
+);
 
 const root = createRoot(document.getElementById('app'));
 root.render(<App />);
